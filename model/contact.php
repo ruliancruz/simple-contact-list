@@ -1,4 +1,6 @@
 <?php
+require_once "core/database.php";
+
 class Contact
 {
   private $attributes = [];
@@ -155,3 +157,4 @@ class Contact
            " WHERE id={$this->id}";
   }
 }
+?>
