@@ -7,7 +7,7 @@ class ContactsController extends ApplicationController
   public function index()
   {
     $contacts = Contact::all();
-    return $this->view('grade', ['contacts' => $contacts]);
+    return $this->view('index', ['contacts' => $contacts]);
   }
 
   public function create() { return $this->view('form'); }
@@ -32,9 +32,9 @@ class ContactsController extends ApplicationController
   public function update($data)
   {
     $contact = Contact::find((int) $data['id']);
-    $contact = $this->request->name;
-    $contact = $this->request->phone;
-    $contact = $this->request->email;
+    $contact->name = $this->request->name;
+    $contact->email = $this->request->phone;
+    $contact->phone = $this->request->email;
     $contact->save();
 
     return $this->index();

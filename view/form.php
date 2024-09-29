@@ -29,7 +29,7 @@
         <div class="card-footer">
           <input type="hidden" name="id" id="id" value="<?= isset($contact->id) ? $contact->id : null ?>">
           <button class="btn btn-success" type="submit">Salvar</button>
-          <button class="btn btn-secondary">Limpar</button>
+          <button class="btn btn-secondary" type="reset">Limpar</button>
           <a class="btn btn-danger" href="?controller=ContactsController&method=index">Cancelar</a>
         </div>
       </div>

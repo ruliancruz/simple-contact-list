@@ -6,7 +6,7 @@
   <title>Contatos Cadastrados</title>
 </head>
 <body>
-  <h1>Contatos</h1>
+  <h1 class="ml-4 mt-2">Contatos</h1>
   <hr>
   <div class="container">
     <table class="table table-bordered table-striped" style="top:40px;">
@@ -29,7 +29,7 @@
                 echo "<td>{$contact->phone}</td>";
                 echo "<td>{$contact->email}</td>";
                 echo "<td>";
-                  echo "<a href='?controller=ContactsController&method=edit&id={$contact->id}' class='btn btn-primary btn-sm'>Editar</a>";
+                  echo "<a href='?controller=ContactsController&method=edit&id={$contact->id}' class='btn btn-primary btn-sm mr-2'>Editar</a>";
                   echo "<a href='?controller=ContactsController&method=destroy&id={$contact->id}' class='btn btn-danger btn-sm'>Excluir</a>";
                 echo "</td>";
               echo "</tr>";

@@ -15,7 +15,7 @@ class ApplicationController
     }
 
     ob_start();
-    include ".\\view\\{$file}.php";
+    include "view/{$file}.php";
     ob_flush();
   }
 }

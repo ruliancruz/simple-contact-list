@@ -61,7 +61,8 @@ class Contact
     Database::useConnection(function($connection) use ($sql, $id, &$contact)
     {
       $statement = $connection->prepare($sql);
-      $statement->bindParam(':id', $id, PDO::PARAM_INT)->execute();
+      $statement->bindParam(':id', $id, PDO::PARAM_INT);
+      $statement->execute();
 
       if($statement->rowCount() > 0)
       {
@@ -80,7 +81,8 @@ class Contact
     Database::useConnection(function($connection) use ($sql, $id, &$success)
     {
       $statement = $connection->prepare($sql);
-      $success = $statement->bindParam(':id', $id, PDO::PARAM_INT)->execute();
+      $success = $statement->bindParam(':id', $id, PDO::PARAM_INT);
+      $statement->execute();
     });
 
     return $success;
